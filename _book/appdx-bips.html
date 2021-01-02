@@ -1,0 +1,1252 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>附录C：比特币改进提案（BIP） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="appdx-bitcore.html" />
+    
+    
+    <link rel="prev" href="appdx-scriptops.html" />
+    
+
+    
+        <link rel="shortcut icon" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='assets/images/apple-touch-icon.png'>
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    原版序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="cn-preface.html">
+            
+                <a href="cn-preface.html">
+            
+                    
+                    中文版序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="trans-preface.html">
+            
+                <a href="trans-preface.html">
+            
+                    
+                    译者序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="second_edition_changes.html">
+            
+                <a href="second_edition_changes.html">
+            
+                    
+                    第二版更新内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="glossary.html">
+            
+                <a href="glossary.html">
+            
+                    
+                    词汇表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch01.html">
+            
+                <a href="ch01.html">
+            
+                    
+                    第一章 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch02.html">
+            
+                <a href="ch02.html">
+            
+                    
+                    第二章 比特币原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch03.html">
+            
+                <a href="ch03.html">
+            
+                    
+                    第三章 比特币核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch04.html">
+            
+                <a href="ch04.html">
+            
+                    
+                    第四章 密钥和地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch05.html">
+            
+                <a href="ch05.html">
+            
+                    
+                    第五章 钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    第六章 交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch07.html">
+            
+                <a href="ch07.html">
+            
+                    
+                    第七章 高级交易和脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    第八章 比特币网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    第九章 区块链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    第十章 挖矿和共识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    第十一章 比特币安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    第十二章 比特币应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="appdx-bitcoinwhitepaper.html">
+            
+                <a href="appdx-bitcoinwhitepaper.html">
+            
+                    
+                    附录A-1 比特币白皮书吴忌寒翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="bitcoin-whitepaper-cn.html">
+            
+                <a href="bitcoin-whitepaper-cn.html">
+            
+                    
+                    附录A-2 比特币白皮书李笑来翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="appdx-scriptops.html">
+            
+                <a href="appdx-scriptops.html">
+            
+                    
+                    附录B 交易脚本的操作符、常量和符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22" data-path="appdx-bips.html">
+            
+                <a href="appdx-bips.html">
+            
+                    
+                    附录C：比特币改进提案（BIP）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="appdx-bitcore.html">
+            
+                <a href="appdx-bitcore.html">
+            
+                    
+                    附录D：Bitcore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="appdx-pycoin.html">
+            
+                <a href="appdx-pycoin.html">
+            
+                    
+                    附录E：pycoin库、实用密钥程序ku和交易程序tx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="appdx-bx.html">
+            
+                <a href="appdx-bx.html">
+            
+                    
+                    附录F：Bitcoin Explorer（bx）命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >附录C：比特币改进提案（BIP）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x9644;&#x5F55;c&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#xFF08;bips&#xFF09;"><b></b>&#x9644;&#x5F55;C&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#xFF08;BIPs&#xFF09;</a></li></ul></div><a href="#&#x9644;&#x5F55;c&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#xFF08;bips&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9644;&#x5F55;c&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#xFF08;bips&#xFF09;"><a name="&#x9644;&#x5F55;c&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#xFF08;bips&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9644;&#x5F55;c&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#xFF08;bips&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9644;&#x5F55;C&#x3001;&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#xFF08;BIPs&#xFF09;</h1>
+<p>&#x6BD4;&#x7279;&#x5E01;&#x6539;&#x8FDB;&#x63D0;&#x6848;&#x662F;&#x5411;&#x6BD4;&#x7279;&#x5E01;&#x793E;&#x533A;&#x63D0;&#x4F9B;&#x4FE1;&#x606F;&#x7684;&#x8BBE;&#x8BA1;&#x6587;&#x6863;&#xFF0C;&#x6216;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x6BD4;&#x7279;&#x5E01;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x6D41;&#x7A0B;&#x6216;&#x73AF;&#x5883;&#x3002;</p>
+<p>&#x6839;&#x636E;BIP-01&#xFF0C;&#x4E5F;&#x5C31;&#x662F;BIP&#x76EE;&#x7684;&#x548C;&#x6307;&#x5357;&#xFF08;BIP Purpose and Guidelines&#xFF09;&#x7684;&#x89C4;&#x5B9A;&#xFF0C;&#x6709;&#x4E09;&#x79CD;BIP&#xFF1A;</p>
+<p>&#x6807;&#x51C6;&#xFF08;<em>Standard</em>&#xFF09;&#x7C7B;BIP</p>
+<p>&#x63CF;&#x8FF0;&#x5F71;&#x54CD;&#x5927;&#x591A;&#x6570;&#x6216;&#x6240;&#x6709;&#x6BD4;&#x7279;&#x5E01;&#x5B9E;&#x73B0;&#x7684;&#x4EFB;&#x4F55;&#x66F4;&#x6539;&#xFF0C;&#x4F8B;&#x5982;&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#x7684;&#x66F4;&#x6539;&#xFF0C;&#x533A;&#x5757;&#x6216;&#x4EA4;&#x6613;&#x6709;&#x6548;&#x6027;&#x89C4;&#x5219;&#x7684;&#x66F4;&#x6539;&#xFF0C;&#x6216;&#x5F71;&#x54CD;&#x4F7F;&#x7528;&#x6BD4;&#x7279;&#x5E01;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E92;&#x64CD;&#x4F5C;&#x6027;&#x7684;&#x4EFB;&#x4F55;&#x66F4;&#x6539;&#x6216;&#x9644;&#x52A0;&#x3002;</p>
+<p>&#x4FE1;&#x606F;&#xFF08;<em>Informational</em>&#xFF09;&#x7C7B;BIP</p>
+<p>&#x63CF;&#x8FF0;&#x6BD4;&#x7279;&#x5E01;&#x8BBE;&#x8BA1;&#x95EE;&#x9898;&#xFF0C;&#x6216;&#x5411;&#x6BD4;&#x7279;&#x5E01;&#x793E;&#x533A;&#x63D0;&#x4F9B;&#x4E00;&#x822C;&#x51C6;&#x5219;&#x6216;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x4E0D;&#x63D0;&#x51FA;&#x65B0;&#x529F;&#x80FD;&#x3002;&#x4FE1;&#x606F;&#x7C7B;BIP&#x4E0D;&#x4E00;&#x5B9A;&#x4EE3;&#x8868;&#x6BD4;&#x7279;&#x5E01;&#x793E;&#x533A;&#x7684;&#x5171;&#x8BC6;&#x6216;&#x5EFA;&#x8BAE;&#xFF0C;&#x56E0;&#x6B64;&#x7528;&#x6237;&#x548C;&#x5B9E;&#x65BD;&#x8005;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4FE1;&#x606F;&#x7C7B;BIP&#x6216;&#x9075;&#x5FAA;&#x4ED6;&#x4EEC;&#x7684;&#x5EFA;&#x8BAE;&#x3002;</p>
+<p>&#x8FC7;&#x7A0B;&#xFF08;<em>Process</em>&#xFF09;&#x7C7B;BIP</p>
+<p>&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x6BD4;&#x7279;&#x5E01;&#x8FC7;&#x7A0B;&#xFF0C;&#x6216;&#x8005;&#x63D0;&#x51FA;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;&#x7684;&#x66F4;&#x6539;&#xFF08;&#x6216;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF09;&#x3002;&#x8FC7;&#x7A0B;&#x7C7B;BIP&#x7C7B;&#x4F3C;&#x4E8E;&#x6807;&#x51C6;&#x7C7B;BIP&#xFF0C;&#x4F46;&#x9002;&#x7528;&#x4E8E;&#x6BD4;&#x7279;&#x5E01;&#x534F;&#x8BAE;&#x672C;&#x8EAB;&#x4EE5;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x9886;&#x57DF;&#x3002;&#x4ED6;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x63D0;&#x51FA;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x6BD4;&#x7279;&#x5E01;&#x7684;&#x4EE3;&#x7801;&#x5E93;;&#x4ED6;&#x4EEC;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x793E;&#x533A;&#x7684;&#x5171;&#x8BC6;;&#x4E0E;&#x4FE1;&#x606F;&#x7C7B;BIP&#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5EFA;&#x8BAE;&#xFF0C;&#x7528;&#x6237;&#x901A;&#x5E38;&#x4E5F;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x5FFD;&#x7565;&#x5B83;&#x4EEC;&#x3002;&#x4F8B;&#x5982;&#x5305;&#x62EC;&#x7A0B;&#x5E8F;&#xFF0C;&#x6307;&#x5357;&#xFF0C;&#x51B3;&#x7B56;&#x8FC7;&#x7A0B;&#x7684;&#x53D8;&#x5316;&#x4EE5;&#x53CA;&#x5BF9;&#x6BD4;&#x7279;&#x5E01;&#x5F00;&#x53D1;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x6216;&#x73AF;&#x5883;&#x7684;&#x66F4;&#x6539;&#x3002;&#x4EFB;&#x4F55;&#x5143;BIP&#x4E5F;&#x88AB;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;BIP&#x3002;</p>
+<p>BIP&#x8BB0;&#x5F55;&#x5728;GitHub&#x4E0A;&#x7684;&#x7248;&#x672C;&#x5316;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#xFF1A;<a href="https://github.com/bitcoin/bips&#x3002;" target="_blank">https://github.com/bitcoin/bips&#x3002;</a> &#x4E0B;&#x8868;BIP&#x7684;&#x5FEB;&#x7167;&#x663E;&#x793A;&#x5728;2017&#x5E74;4&#x6708;BIP&#x7684;&#x5FEB;&#x7167;&#x3002;&#x4E86;&#x89E3;&#x6709;&#x5173;&#x73B0;&#x6709;BIP&#x53CA;&#x5176;&#x5185;&#x5BB9;&#x7684;&#x6700;&#x65B0;&#x4FE1;&#x606F;&#x8BF7;&#x54A8;&#x8BE2;&#x6743;&#x5A01;&#x673A;&#x6784;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>BIP#</th>
+<th>Title</th>
+<th>Owner</th>
+<th>Type</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki" target="_blank">BIP-1</a></td>
+<td>BIP Purpose and Guidelines</td>
+<td>Amir Taaki</td>
+<td>Process</td>
+<td>Replaced</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0002.mediawiki" target="_blank">BIP-2</a></td>
+<td>BIP process, revised</td>
+<td>Luke Dashjr</td>
+<td>Process</td>
+<td>Active</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0008.mediawiki" target="_blank">BIP-8</a></td>
+<td>Version bits with guaranteed lock-in</td>
+<td>Shaolin Fry</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki" target="_blank">BIP-9</a></td>
+<td>Version bits with timeout and delay</td>
+<td>Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell</td>
+<td>Informational</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0010.mediawiki" target="_blank">BIP-10</a></td>
+<td>Multi-Sig Transaction Distribution</td>
+<td>Alan Reiner</td>
+<td>Informational</td>
+<td>Withdrawn</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0011.mediawiki" target="_blank">BIP-11</a></td>
+<td>M-of-N Standard Transactions</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0012.mediawiki" target="_blank">BIP-12</a></td>
+<td>OP_EVAL</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Withdrawn</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0013.mediawiki" target="_blank">BIP-13</a></td>
+<td>Address Format for pay-to-script-hash</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0014.mediawiki" target="_blank">BIP-14</a></td>
+<td>Protocol Version and User Agent</td>
+<td>Amir Taaki, Patrick Strateman</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0015.mediawiki" target="_blank">BIP-15</a></td>
+<td>Aliases</td>
+<td>Amir Taaki</td>
+<td>Standard</td>
+<td>Deferred</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki" target="_blank">BIP-16</a></td>
+<td>Pay to Script Hash</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0017.mediawiki" target="_blank">BIP-17</a></td>
+<td>OP_CHECKHASHVERIFY (CHV)</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Withdrawn</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0018.mediawiki" target="_blank">BIP-18</a></td>
+<td>hashScriptCheck</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0019.mediawiki" target="_blank">BIP-19</a></td>
+<td>M-of-N Standard Transactions (Low SigOp)</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0020.mediawiki" target="_blank">BIP-20</a></td>
+<td>URI Scheme</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Replaced</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki" target="_blank">BIP-21</a></td>
+<td>URI Scheme</td>
+<td>Nils Schneider, Matt Corallo</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki" target="_blank">BIP-22</a></td>
+<td>getblocktemplate - Fundamentals</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0023.mediawiki" target="_blank">BIP-23</a></td>
+<td>getblocktemplate - Pooled Mining</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki" target="_blank">BIP-30</a></td>
+<td>Duplicate transactions</td>
+<td>Pieter Wuille</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0031.mediawiki" target="_blank">BIP-31</a></td>
+<td>Pong message</td>
+<td>Mike Hearn</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" target="_blank">BIP-32</a></td>
+<td>Hierarchical Deterministic Wallets</td>
+<td>Pieter Wuille</td>
+<td>Informational</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0033.mediawiki" target="_blank">BIP-33</a></td>
+<td>Stratized Nodes</td>
+<td>Amir Taaki</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki" target="_blank">BIP-34</a></td>
+<td>Block v2, Height in Coinbase</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0035.mediawiki" target="_blank">BIP-35</a></td>
+<td>mempool message</td>
+<td>Jeff Garzik</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0036.mediawiki" target="_blank">BIP-36</a></td>
+<td>Custom Services</td>
+<td>Stefan Thomas</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki" target="_blank">BIP-37</a></td>
+<td>Connection Bloom filtering</td>
+<td>Mike Hearn, Matt Corallo</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki" target="_blank">BIP-39</a></td>
+<td>Mnemonic code for generating deterministic keys</td>
+<td>Marek Palatinus, Pavol Rusnak, Aaron Voisine, Sean Bowe</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0040.mediawiki" target="_blank">BIP-40</a></td>
+<td>Stratum wire protocol</td>
+<td>Marek Palatinus</td>
+<td>Standard</td>
+<td>BIP number allocated</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0041.mediawiki" target="_blank">BIP-41</a></td>
+<td>Stratum mining protocol</td>
+<td>Marek Palatinus</td>
+<td>Standard</td>
+<td>BIP number allocated</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki" target="_blank">BIP-42</a></td>
+<td>A finite monetary supply for Bitcoin</td>
+<td>Pieter Wuille</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0043.mediawiki" target="_blank">BIP-43</a></td>
+<td>Purpose Field for Deterministic Wallets</td>
+<td>Marek Palatinus, Pavol Rusnak</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki" target="_blank">BIP-44</a></td>
+<td>Multi-Account Hierarchy for Deterministic Wallets</td>
+<td>Marek Palatinus, Pavol Rusnak</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki" target="_blank">BIP-45</a></td>
+<td>Structure for Deterministic P2SH Multisignature Wallets</td>
+<td>Manuel Araoz, Ryan X. Charles, Matias Alejo Garcia</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0047.mediawiki" target="_blank">BIP-47</a></td>
+<td>Reusable Payment Codes for Hierarchical Deterministic Wallets</td>
+<td>Justus Ranvier</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0049.mediawiki" target="_blank">BIP-49</a></td>
+<td>Derivation scheme for P2WPKH-nested-in-P2SH based accounts</td>
+<td>Daniel Weigl</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki" target="_blank">BIP-50</a></td>
+<td>March 2013 Chain Fork Post-Mortem</td>
+<td>Gavin Andresen</td>
+<td>Informational</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0060.mediawiki" target="_blank">BIP-60</a></td>
+<td>Fixed Length &quot;version&quot; Message (Relay-Transactions Field)</td>
+<td>Amir Taaki</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0061.mediawiki" target="_blank">BIP-61</a></td>
+<td>Reject P2P message</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki" target="_blank">BIP-62</a></td>
+<td>Dealing with malleability</td>
+<td>Pieter Wuille</td>
+<td>Standard</td>
+<td>Withdrawn</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0063.mediawiki" target="_blank">BIP-63</a></td>
+<td>Stealth Addresses</td>
+<td>Peter Todd</td>
+<td>Standard</td>
+<td>BIP number allocated</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0064.mediawiki" target="_blank">BIP-64</a></td>
+<td>getutxo message</td>
+<td>Mike Hearn</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki" target="_blank">BIP-65</a></td>
+<td>OP_CHECKLOCKTIMEVERIFY</td>
+<td>Peter Todd</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0066.mediawiki" target="_blank">BIP-66</a></td>
+<td>Strict DER signatures</td>
+<td>Pieter Wuille</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0067.mediawiki" target="_blank">BIP-67</a></td>
+<td>Deterministic Pay-to-script-hash multi-signature addresses through public key sorting</td>
+<td>Thomas Kerin, Jean-Pierre Rupp, Ruben de Vries</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki" target="_blank">BIP-68</a></td>
+<td>Relative lock-time using consensus-enforced sequence numbers</td>
+<td>Mark Friedenbach, BtcDrak, Nicolas Dorier, kinoshitajona</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0069.mediawiki" target="_blank">BIP-69</a></td>
+<td>Lexicographical Indexing of Transaction Inputs and Outputs</td>
+<td>Kristov Atlas</td>
+<td>Informational</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki" target="_blank">BIP-70</a></td>
+<td>Payment Protocol</td>
+<td>Gavin Andresen, Mike Hearn</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0071.mediawiki" target="_blank">BIP-71</a></td>
+<td>Payment Protocol MIME types</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0072.mediawiki" target="_blank">BIP-72</a></td>
+<td>bitcoin: uri extensions for Payment Protocol</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0073.mediawiki" target="_blank">BIP-73</a></td>
+<td>Use &quot;Accept&quot; header for response type negotiation with Payment Request URLs</td>
+<td>Stephen Pair</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0074.mediawiki" target="_blank">BIP-74</a></td>
+<td>Allow zero value OP_RETURN in Payment Protocol</td>
+<td>Toby Padilla</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0075.mediawiki" target="_blank">BIP-75</a></td>
+<td>Out of Band Address Exchange using Payment Protocol Encryption</td>
+<td>Justin Newton, Matt David, Aaron Voisine, James MacWhyte</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0080.mediawiki" target="_blank">BIP-80</a></td>
+<td>Hierarchy for Non-Colored Voting Pool Deterministic Multisig Wallets</td>
+<td>Justus Ranvier, Jimmy Song</td>
+<td>Informational</td>
+<td>Deferred</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0081.mediawiki" target="_blank">BIP-81</a></td>
+<td>Hierarchy for Colored Voting Pool Deterministic Multisig Wallets</td>
+<td>Justus Ranvier, Jimmy Song</td>
+<td>Informational</td>
+<td>Deferred</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0083.mediawiki" target="_blank">BIP-83</a></td>
+<td>Dynamic Hierarchical Deterministic Key Trees</td>
+<td>Eric Lombrozo</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0090.mediawiki" target="_blank">BIP-90</a></td>
+<td>Buried Deployments</td>
+<td>Suhas Daftuar</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0099.mediawiki" target="_blank">BIP-99</a></td>
+<td>Motivation and deployment of consensus rule changes ([soft/hard]forks)</td>
+<td>Jorge Tim&#xF3;n</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0101.mediawiki" target="_blank">BIP-101</a></td>
+<td>Increase maximum block size</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Withdrawn</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0102.mediawiki" target="_blank">BIP-102</a></td>
+<td>Block size increase to 2MB</td>
+<td>Jeff Garzik</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0103.mediawiki" target="_blank">BIP-103</a></td>
+<td>Block size following technological growth</td>
+<td>Pieter Wuille</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0104.mediawiki" target="_blank">BIP-104</a></td>
+<td>&apos;Block75&apos; - Max block size like difficulty</td>
+<td>t.khan</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0105.mediawiki" target="_blank">BIP-105</a></td>
+<td>Consensus based block size retargeting algorithm</td>
+<td>BtcDrak</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0106.mediawiki" target="_blank">BIP-106</a></td>
+<td>Dynamically Controlled Bitcoin Block Size Max Cap</td>
+<td>Upal Chakraborty</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0107.mediawiki" target="_blank">BIP-107</a></td>
+<td>Dynamic limit on the block size</td>
+<td>Washington Y. Sanchez</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0109.mediawiki" target="_blank">BIP-109</a></td>
+<td>Two million byte size limit with sigop and sighash limits</td>
+<td>Gavin Andresen</td>
+<td>Standard</td>
+<td>Rejected</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0111.mediawiki" target="_blank">BIP-111</a></td>
+<td>NODE_BLOOM service bit</td>
+<td>Matt Corallo, Peter Todd</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki" target="_blank">BIP-112</a></td>
+<td>CHECKSEQUENCEVERIFY</td>
+<td>BtcDrak, Mark Friedenbach, Eric Lombrozo</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki" target="_blank">BIP-113</a></td>
+<td>Median time-past as endpoint for lock-time calculations</td>
+<td>Thomas Kerin, Mark Friedenbach</td>
+<td>Standard</td>
+<td>Final</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0114.mediawiki" target="_blank">BIP-114</a></td>
+<td>Merkelized Abstract Syntax Tree</td>
+<td>Johnson Lau</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0120.mediawiki" target="_blank">BIP-120</a></td>
+<td>Proof of Payment</td>
+<td>Kalle Rosenbaum</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0121.mediawiki" target="_blank">BIP-121</a></td>
+<td>Proof of Payment URI scheme</td>
+<td>Kalle Rosenbaum</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0122.mediawiki" target="_blank">BIP-122</a></td>
+<td>URI scheme for Blockchain references / exploration</td>
+<td>Marco Pontello</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0123.mediawiki" target="_blank">BIP-123</a></td>
+<td>BIP Classification</td>
+<td>Eric Lombrozo</td>
+<td>Process</td>
+<td>Active</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0124.mediawiki" target="_blank">BIP-124</a></td>
+<td>Hierarchical Deterministic Script Templates</td>
+<td>Eric Lombrozo, William Swanson</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki" target="_blank">BIP-125</a></td>
+<td>Opt-in Full Replace-by-Fee Signaling</td>
+<td>David A. Harding, Peter Todd</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0126.mediawiki" target="_blank">BIP-126</a></td>
+<td>Best Practices for Heterogeneous Input Script Transactions</td>
+<td>Kristov Atlas</td>
+<td>Informational</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0130.mediawiki" target="_blank">BIP-130</a></td>
+<td>sendheaders message</td>
+<td>Suhas Daftuar</td>
+<td>Standard</td>
+<td>Proposed</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0131.mediawiki" target="_blank">BIP-131</a></td>
+<td>&quot;Coalescing Transaction&quot; Specification (wildcard inputs)</td>
+<td>Chris Priest</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0132.mediawiki" target="_blank">BIP-132</a></td>
+<td>Committee-based BIP Acceptance Process</td>
+<td>Andy Chase</td>
+<td>Process</td>
+<td>Withdrawn</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0133.mediawiki" target="_blank">BIP-133</a></td>
+<td>feefilter message</td>
+<td>Alex Morcos</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0134.mediawiki" target="_blank">BIP-134</a></td>
+<td>Flexible Transactions</td>
+<td>Tom Zander</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0140.mediawiki" target="_blank">BIP-140</a></td>
+<td>Normalized TXID</td>
+<td>Christian Decker</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki" target="_blank">BIP-141</a></td>
+<td>Segregated Witness (Consensus layer)</td>
+<td>Eric Lombrozo, Johnson Lau, Pieter Wuille</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0142.mediawiki" target="_blank">BIP-142</a></td>
+<td>Address Format for Segregated Witness</td>
+<td>Johnson Lau</td>
+<td>Standard</td>
+<td>Deferred</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki" target="_blank">BIP-143</a></td>
+<td>Transaction Signature Verification for Version 0 Witness Program</td>
+<td>Johnson Lau, Pieter Wuille</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki" target="_blank">BIP-144</a></td>
+<td>Segregated Witness (Peer Services)</td>
+<td>Eric Lombrozo, Pieter Wuille</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0145.mediawiki" target="_blank">BIP-145</a></td>
+<td>getblocktemplate Updates for Segregated Witness</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0146.mediawiki" target="_blank">BIP-146</a></td>
+<td>Dealing with signature encoding malleability</td>
+<td>Johnson Lau, Pieter Wuille</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki" target="_blank">BIP-147</a></td>
+<td>Dealing with dummy stack element malleability</td>
+<td>Johnson Lau</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki" target="_blank">BIP-148</a></td>
+<td>Mandatory activation of segwit deployment</td>
+<td>Shaolin Fry</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0150.mediawiki" target="_blank">BIP-150</a></td>
+<td>Peer Authentication</td>
+<td>Jonas Schnelli</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0151.mediawiki" target="_blank">BIP-151</a></td>
+<td>Peer-to-Peer Communication Encryption</td>
+<td>Jonas Schnelli</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki" target="_blank">BIP-152</a></td>
+<td>Compact Block Relay</td>
+<td>Matt Corallo</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0171.mediawiki" target="_blank">BIP-171</a></td>
+<td>Currency/exchange rate information API</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0180.mediawiki" target="_blank">BIP-180</a></td>
+<td>Block size/weight fraud proof</td>
+<td>Luke Dashjr</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bitcoin/bips/blob/master/bip-0199.mediawiki" target="_blank">BIP-199</a></td>
+<td>Hashed Time-Locked Contract transactions</td>
+<td>Sean Bowe, Daira Hopwood</td>
+<td>Standard</td>
+<td>Draft</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="appdx-scriptops.html" class="navigation navigation-prev " aria-label="Previous page: 附录B 交易脚本的操作符、常量和符号">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="appdx-bitcore.html" class="navigation navigation-next " aria-label="Next page: 附录D：Bitcore">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"附录C：比特币改进提案（BIP）","level":"1.22","depth":1,"next":{"title":"附录D：Bitcore","level":"1.23","depth":1,"path":"appdx-bitcore.md","ref":"appdx-bitcore.md","articles":[]},"previous":{"title":"附录B 交易脚本的操作符、常量和符号","level":"1.21","depth":1,"path":"appdx-scriptops.md","ref":"appdx-scriptops.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","favicon","-lunr","-search","search-plus","github","ancre-navigation","prism","-highlight"],"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/lusuzi"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/apple-touch-icon.png"},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/lusuzi/MasterBitcoin2CN"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"appdx-bips.md","mtime":"2021-01-02T00:11:05.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-02T03:07:39.435Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

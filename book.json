@@ -1,0 +1,27 @@
+{
+    "plugins": [
+        "edit-link",
+        "favicon",
+        "-lunr", 
+        "-search", 
+        "search-plus",
+        "github",
+        "ancre-navigation",
+        "prism",
+        "-highlight"
+    ],
+    "pluginsConfig": {
+    	"github": {
+        "url": "https://github.com/lusuzi"
+    },
+        "edit-link": {
+        "base": "https://github.com/lusuzi/MasterBitcoin2CN",
+        "label": "Edit This Page"
+    },
+    "favicon": {
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico",
+            "appleTouch": "assets/images/apple-touch-icon.png"
+        }
+    }
+}
